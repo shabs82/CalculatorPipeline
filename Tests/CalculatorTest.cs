@@ -1,19 +1,22 @@
 using NUnit.Framework;
+using Services;
 
 namespace Tests
 {
     public class Tests
     {
+        private ICalculator _calc;
         [SetUp]
         public void Setup()
         {
-            // Initialize a shared instance of the calculator service here.
+            _calc = new Calculator();
         }
 
         [Test]
         public void AddNumbersWithNoInput()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            _calc.Add();
+           Assert.Inconclusive("Test not fully implemented");
         }
 
         [Test]
