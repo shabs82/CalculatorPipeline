@@ -1,13 +1,14 @@
 using NUnit.Framework;
 using Services;
+
 using System;
+
 
 namespace Tests
 {
     public class Tests
     {
         private ICalculator _calc;
-
         [SetUp]
         public void Setup()
         {
@@ -17,7 +18,8 @@ namespace Tests
         [Test]
         public void AddNumbersWithNoInput()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            _calc.Add();
+           Assert.Inconclusive("Test not fully implemented");
         }
 
         [Test]
