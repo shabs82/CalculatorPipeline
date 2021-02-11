@@ -137,6 +137,13 @@ namespace Tests
         }
 
         [Test]
+        public void FactorialOfFive()
+        {
+            double myResult = _calc.Factorial(5);
+            Assert.Equals(120, myResult);
+        }
+
+        [Test]
         public void FactorialOf200()
         {
             try
