@@ -1,4 +1,4 @@
-using NUnit.Framework;
+    using NUnit.Framework;
 using Services;
 using System;
 
@@ -25,7 +25,9 @@ namespace Tests
         [Test]
         public void AddTwoPositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            var actual = _calc.Add(1.2, 7.4);
+            const double expected = 8.6;
+            Assert.AreEqual(actual, expected);
         }
 
         [Test]
