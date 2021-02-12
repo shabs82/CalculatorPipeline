@@ -39,6 +39,8 @@ namespace Services
 
         public double Factorial(double number)
         {
+            if (number == 0) return 1;
+
             for (double ii = number - 1; ii >= 1; ii--)
             {
                 number *= ii;
