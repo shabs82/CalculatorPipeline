@@ -41,7 +41,9 @@ namespace Tests
         [Test]
         public void AddThreePositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            var actual = _calc.Add(3.5, 3, 7.9);
+            const double expected = 14.4;
+            Assert.AreEqual(actual, expected);
         }
 
         [Test]
