@@ -85,7 +85,7 @@ namespace Tests
         [Test]
         public void MultiplyTwoPositiveNumbers()
         {
-            var actual = _calculator.Multiply(5, 5);
+            var actual = _calc.Multiply(5, 5);
             const double expected = 25;
             Assert.AreEqual(expected, actual);
         }
@@ -93,7 +93,7 @@ namespace Tests
         [Test]
         public void MultiplyTwoNegativeNumbers()
         {
-            var actual = _calculator.Multiply(-5, -5);
+            var actual = _calc.Multiply(-5, -5);
             const double expected = 25;
             Assert.AreEqual(expected, actual);
         }
@@ -101,7 +101,7 @@ namespace Tests
         [Test]
         public void MultiplyThreePositiveNumbers()
         {
-            var actual = _calculator.Multiply(5, 5, 2);
+            var actual = _calc.Multiply(5, 5, 2);
             const double expected = 50;
             Assert.AreEqual(expected, actual);
         }
@@ -109,7 +109,7 @@ namespace Tests
         [Test]
         public void MultiplyThreeNegativeNumbers()
         {
-            var actual = _calculator.Multiply(-5, -5, -2);
+            var actual = _calc.Multiply(-5, -5, -2);
             const double expected = -50;
             Assert.AreEqual(expected, actual);
         }
