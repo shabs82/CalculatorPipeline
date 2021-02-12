@@ -85,25 +85,33 @@ namespace Tests
         [Test]
         public void MultiplyTwoPositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            var actual = _calculator.Multiply(5, 5);
+            const double expected = 25;
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void MultiplyTwoNegativeNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            var actual = _calculator.Multiply(-5, -5);
+            const double expected = 25;
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void MultiplyThreePositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            var actual = _calculator.Multiply(5, 5, 2);
+            const double expected = 50;
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void MultiplyThreeNegativeNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            var actual = _calculator.Multiply(-5, -5, -2);
+            const double expected = -50;
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
