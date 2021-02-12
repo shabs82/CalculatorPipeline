@@ -143,9 +143,9 @@ namespace Tests
             {
                 double myResult = _calc.Factorial(200);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Assert.Throws<Exception>(() => e.GetType());
+                Assert.Pass();
             }
 
         }
@@ -154,7 +154,7 @@ namespace Tests
         public void FactorialOfZero()
         {
             double myResult = _calc.Factorial(0);
-            Assert.Equals(1, myResult);
+            Assert.AreEqual(1, myResult);
         }
 
         [Test]
@@ -164,9 +164,9 @@ namespace Tests
             {
                 double myResult = _calc.Factorial(-1);
             }
-            catch (Exception e)
+            catch (ArgumentOutOfRangeException)
             {
-                Assert.Throws<ArgumentOutOfRangeException>(() => e.GetType());
+                Assert.Pass();
             }
         }
     }
