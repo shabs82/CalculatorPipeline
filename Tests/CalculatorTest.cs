@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Services;
-
 using System;
+
 
 
 namespace Tests
@@ -109,32 +109,70 @@ namespace Tests
         [Test]
         public void DivideNumbersWithNoInput()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            try
+            {
+                double[] numbers = new double[2];
+                _calc.Divide(numbers);
+            }
+            catch (ArgumentNullException e)
+            {
+                Assert.Pass();
+            }
         }
 
         [Test]
         public void DivideTwoPositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            double[] numbers = { 12.0, 2.0 };
+            double result = _calc.Divide(numbers);
+            Assert.AreEqual(6.0, result);
+
         }
 
         [Test]
         public void DivideTwoNegativeNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            try
+            {
+                double[] numbers = { -12.0, -2.0 };
+                double myResult = _calc.Divide(numbers);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Assert.Pass();
+            }
+
         }
 
         [Test]
         public void DivideTwoNumbersWithZero()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            try
+            {
+                double[] numbers = { 0, 2.0 };
+                double myResult = _calc.Divide(numbers);
+            }
+            catch (DivideByZeroException e)
+            {
+                Assert.Pass();
+            }
+            
         }
 
         [Test]
         public void DivideThreeNumbersWithZero()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            try
+            {
+                double[] numbers = { 0, 2.0, 5.0 };
+                double myResult = _calc.Divide(numbers);
+            }
+            catch (DivideByZeroException e)
+            {
+                Assert.Pass();
+            }
         }
+
 
         [Test]
         public void FactorialOfFive()
