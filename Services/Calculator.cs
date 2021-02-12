@@ -51,7 +51,7 @@ namespace Services
             {
                 double myNum = numbers[0];
                 
-                for (int i = 1; i = numbers.Length; i++)
+                for (int i = 1; i < numbers.Length; i++)
                 {
                     if(numbers[i] == 0){
                     throw new Exception("Cant be divided by 0");
