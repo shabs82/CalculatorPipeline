@@ -32,7 +32,13 @@ namespace Services
 
         public double Factorial(double number)
         {
-            throw new NotImplementedException();
+            for (double ii = number - 1; ii >= 1; ii--)
+            {
+                number *= ii;
+            }
+            return number;
+
         }
+
     }
 }
