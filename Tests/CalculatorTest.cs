@@ -2,12 +2,14 @@ using NUnit.Framework;
 using Services;
 using System;
 
+
+
 namespace Tests
 {
     public class Tests
     {
-        [SetUp]
         private ICalculator _calc;
+        [SetUp]
         public void Setup()
         {
             _calc = new Calculator();
@@ -16,7 +18,8 @@ namespace Tests
         [Test]
         public void AddNumbersWithNoInput()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            _calc.Add();
+           Assert.Inconclusive("Test not fully implemented");
         }
 
         [Test]
@@ -78,7 +81,7 @@ namespace Tests
         {
             Assert.Inconclusive("Test not fully implemented");
         }
-        
+
         [Test]
         public void MultiplyTwoPositiveNumbers()
         {
@@ -174,25 +177,42 @@ namespace Tests
         [Test]
         public void FactorialOfFive()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            double myResult = _calc.Factorial(5);
+            Assert.Equals(120, myResult);
         }
 
         [Test]
         public void FactorialOf200()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            try
+            {
+                double myResult = _calc.Factorial(200);
+            }
+            catch (Exception e)
+            {
+                Assert.Throws<Exception>(() => e.GetType());
+            }
+
         }
 
         [Test]
         public void FactorialOfZero()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            double myResult = _calc.Factorial(0);
+            Assert.Equals(1, myResult);
         }
 
         [Test]
         public void FactorialOfNegativeNumber()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            try
+            {
+                double myResult = _calc.Factorial(-1);
+            }
+            catch (Exception e)
+            {
+                Assert.Throws<ArgumentOutOfRangeException>(() => e.GetType());
+            }
         }
     }
 }

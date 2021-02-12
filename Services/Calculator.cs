@@ -17,7 +17,12 @@ namespace Services
 
         public double Multiply(params double[] numbers)
         {
-            throw new NotImplementedException();
+            double myNum = numbers[0];
+            for (int i = 1; i != numbers.Length; i++)
+            {
+                myNum *= numbers[i];
+            }
+            return myNum;
         }
 
         public double Divide(params double[] numbers)
@@ -27,7 +32,13 @@ namespace Services
 
         public double Factorial(double number)
         {
-            throw new NotImplementedException();
+            for (double ii = number - 1; ii >= 1; ii--)
+            {
+                number *= ii;
+            }
+            return number;
+
         }
+
     }
 }
