@@ -178,7 +178,7 @@ namespace Tests
         public void FactorialOfFive()
         {
             double myResult = _calc.Factorial(5);
-            Assert.Equals(120, myResult);
+            Assert.AreEqual(120, myResult);
         }
 
         [Test]

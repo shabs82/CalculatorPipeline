@@ -17,18 +17,19 @@ namespace Services
 
         public double Multiply(params double[] numbers)
         {
-            if (numbers.Length==0)
+            if (numbers.Length == 0)
             {
                 throw new ArgumentNullException();
-            } else 
-                    {
+            }
+            else
+            {
                 double myNum = numbers[0];
                 for (int i = 1; i != numbers.Length; i++)
                 {
                     myNum *= numbers[i];
                 }
                 return myNum;
-            }            
+            }
         }
 
         public double Divide(params double[] numbers)
