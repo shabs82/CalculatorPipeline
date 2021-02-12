@@ -43,7 +43,24 @@ namespace Services
 
         public double Divide(params double[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers.Length < 2)
+            {
+                throw new ArgumentNullException();
+            }
+            else
+            {
+                double myNum = numbers[0];
+                
+                for (int i = 1; i = numbers.Length; i++)
+                {
+                    if(numbers[i] == 0){
+                    throw new Exception("Cant be divided by 0");
+                    }
+                
+                    myNum /= numbers[i];
+                }
+                return myNum;
+            }
         }
 
         public double Factorial(double number)
